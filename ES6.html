@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ES6 Ecmascript 2015</title>
+    </head>
+    <body>
+        <h2 style="background-color: greenyellow; color: rgb(1, 7, 12); display: inline-block;">ES6 Ecmascript 2015</h2>
+
+        <script type="text/javascript">
+            //let & const
+            //let is use to inside the parameters
+            {
+                let data=10;
+                console.log(data)
+            }
+            //const
+            const data=20;
+           // data=30;
+           // only one time we can use name(data)
+            console.log(data)
+
+            //Arrow function
+            const son=()=>console.log("hello")
+            son();
+
+            const user=(num1)=>{return num1+5;}
+            var output=user(10);
+            console.log(output);
+
+            //classes
+            class person{
+                admin(){
+                    console.log('from admin methad')
+                }
+            }
+            let obj=new person();
+            obj.admin();
+
+            //example
+            class wan{
+                constructor(msg){
+                    this.msg=msg;
+                }
+                admine(){
+                    console.log(this.msg);
+                }
+            }
+            let win=new wan('hi');
+            let win2=new wan(' im am from kuppam');
+            win.admine();
+            win2.admine();
+
+            //for of
+            const arr=[1,2,3,4,5,6];
+            for(const a of arr){
+                console.log(a);
+            }
+
+            //Default parameter
+            function defoult(name,age=20){
+                console.log(name+""+age)
+            }
+            defoult('john')
+
+            //Rest operetor
+            function rest(name,...reamining){
+                console.log(name+""+reamining)
+            }
+            rest('john',25,"john@gmail.com",123784);
+
+            //spreed operetor
+            let spreed=[1,2,3,4,5]
+            let spreed2=[6,7,8,9,10]
+            let spreed3=[...spreed,...spreed2]
+            console.log(spreed3)
+
+            //Destruturing
+            let operater={
+                name:"john",
+                age:25,
+                mail:'john@gmail.com'
+            }
+            const{name,age,mail}=operater;
+            console.log(mail)
+        </script>
+    </body>
+</html>
